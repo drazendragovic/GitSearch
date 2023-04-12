@@ -1,11 +1,17 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 import { GitContext } from "../../App";
 
 export default function Home() {
   const { details, setDetails } = useContext(GitContext);
   const [input, setInput] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const navigate = useNavigate();
 
@@ -59,23 +65,24 @@ export default function Home() {
       });
   };
 
-  const onSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (data) => {
     fetchData();
   };
 
   return (
     <div className="form-wrapper">
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="input-wrapper">
           <span className="label">GitHub username:</span>
           <input
+            {...register("gitUser", { required: "This field is required!", maxLength: { value: 20, message: "Max lenght is 20!" } })}
             className="form-input"
             type="text"
             value={input}
             onChange={(event) => setInput(event.target.value)}
             placeholder="e.g. facebook"
           />
+          {errors.gitUser && <span className="error">{errors.gitUser?.message}</span>}
         </div>
         <input className="form-btn" type="submit" value="Go!" />
       </form>
