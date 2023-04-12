@@ -1,0 +1,126 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 30vh;
+    margin: 0px auto;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: nowrap;
+    width: 80%;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label {
+    font-size: 14px;
+    color: rgb(116, 116, 116);
+    padding-left: 5px;
+}
+
+.form-input {
+    padding: 10px 15px;
+    font-size: 16px;
+    flex-grow: 1;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    user-select: auto;
+}
+
+.form-btn,
+.reset-btn {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: rgb(143, 143, 143);
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.form-btn:hover,
+.reset-btn:hover {
+    cursor: pointer;
+    background-color: rgb(241, 141, 25);
+}
+
+.git-details-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 90vh;
+    margin: 0px auto;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 10px 10px 10px 10px;
+    padding: 20px 40px 40px 40px;
+}
+
+.git-details {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-details {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.git-details-empty {
+    padding-top: 50px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.git-details-empty h4 {
+    text-align: center;
+    color:rgb(143, 143, 143);
+}
+
+.git-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.data {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.git-repos {
+    overflow-y: auto;
+    margin-bottom: 30px;
+    padding-right: 10px;
+}
+
+.git-repos h4 { 
+    margin-bottom: 10px;
+}
+
+.git-repo {
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
